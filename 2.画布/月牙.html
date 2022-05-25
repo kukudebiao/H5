@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>月牙</title>
+</head>
+<body>
+    <canvas id="cavs" width="300px" height="300px">
+        当前浏览器不支持canvas标签请升级浏览器或者使用Chorme浏览器
+    </canvas>
+<script type="text/javascript">
+    var cavs=document.getElementById("cavs");
+    var c=cavs.getContext("2d");
+    c.beginPath();
+    c.arc(150,40,100,0,1*Math.PI);
+    c.stroke();
+    c.closePath();
+    c.beginPath();
+    c.arc(150,25,100,0.05*Math.PI,0.95*Math.PI);
+    c.stroke();
+    c.closePath();
+</script>
+</body>
+</html>

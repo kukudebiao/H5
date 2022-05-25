@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!-- 1.准备画布 -->
+		<canvas id="cavs" width="300px" height="300px">
+			当前浏览器不支持canvas标签请升级浏览器或者使用Chorme浏览器
+		</canvas>
+		<script type="text/javascript">
+			var cavs=document.getElementById("cavs");
+			var c=cavs.getContext("2d");
+			c.beginPath();			
+			c.moveTo(50,50);
+			c.lineTo(0,100);
+			c.lineTo(0,0);
+			c.closePath();
+			// 填充颜色
+			c.fillStyle="red";
+			c.fill();
+			c.stroke();
+			c.closePath();
+		</script>
+	</body>
+</html>

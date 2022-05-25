@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/font-awesome.css"/>
+		<style type="text/css">
+			.fa-bell{
+				transform-origin: 50% 0;
+				animation-name: ringing;
+				animation-duration: 1s;
+			}
+			@keyframes ringing{
+				0%{transform: rotate(0deg);}
+				2%{transform: rotate(-15deg);}
+				4%{transform: rotate(15deg);}
+				6%{transform: rotate(-18deg);}
+				8%{transform: rotate(18deg);}
+				10%{transform: rotate(-22deg);}
+				12%{transform: rotate(22deg);}
+				14%{transform: rotate(-18deg);}
+				16%{transform: rotate(18deg);}
+				18%{transform: rotate(-15deg);}
+				20%{transform: rotate(15deg);}
+				22%{transform: rotate(0deg);}
+			}
+			.fa-envelope{
+				animation-name: ringing1;
+				animation-duration: 1s;
+				transform-origin: 50% 50%;
+			}
+			@keyframes ringing1{
+				0%{transform: translateY(0%);}
+				5%{transform: translateY(-50%);}
+				10%{transform: translateY(50%));}
+			}
+			.yuan{
+				background-image: url(./img/捕获.PNG);
+				border: solid 1px aqua;
+				border-radius: 50%;
+				width: 200px;
+				height: 200px;
+				animation-iteration-count: infinite;
+				animation-name: yuan;
+				animation-duration: 10s;
+				animation-timing-function: linear;
+				background-size: 100% 100%;
+			}
+			@keyframes yuan{
+				0%{transform: rotate(0deg);}
+				50%{transform: rotate(180deg);}
+				100%{transform: rotate(360deg);}
+			}
+			.gun{
+				width: 200px;
+				height: 150px;
+				border-radius: 50%;
+				background: url(./img/捕获.PNG) repeat fixed center;
+				background-size: 100% 100%;
+				animation: gun 8s linear 2 alternate;
+			}
+			@keyframes gun{
+				from{transform: translate(0) rotate(0deg);}
+				to{transform: translate(1000px) rotate(720deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<i class="fa fa-bell fa-4x"></i>
+		<i class="fa fa-envelope fa-4x"></i>
+		<i class="fa  fa-pulse fa-4x"></i>
+		<div class="yuan"></div>
+		<div class="gun"></div>
+	</body>
+</html>

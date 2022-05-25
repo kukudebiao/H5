@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>滑稽脸</title>
+		<style type="text/css">
+			.out_box{
+				width: 300px;
+				height: 300px;
+				text-align: center;
+				background-color: yellow;
+				border: 1px solid yellow;
+				border-radius: 50%;
+				margin: 50px auto;
+			}
+			.eyebrow{
+				width: 210px;
+				height: 40px;
+				margin: 0 auto;
+				margin-top: 20px;
+				text-align: center;
+			}
+			.eyebrow_left{
+				height: 60px;
+				width: 60px;
+				border-radius: 50%;
+				border-top:10px solid black;
+				float: left;
+				transform:rotate(30deg);
+			}
+			.eyebrow_rigth{
+				height: 60px;
+				width: 60px;
+				border-radius: 50%;
+				border-top:10px solid black;
+				float: right;
+				transform:rotate(-30deg);
+			}
+			.eye{
+				width: 300px;
+				height: 60px;
+				margin: 0 auto;
+				clear: both;
+			}
+			.eye_left{
+				width: 80px;
+				height: 30px;
+				background-color: white;
+				border-radius: 50%;
+				margin-left:20px;
+				position: relative;
+				float: left;
+			}
+			.eye_right{
+				width: 80px;
+				height: 30px;
+				background-color: white;
+				border-radius: 50%;
+				margin-right:20px;
+				position: relative;
+				float: right;
+			}
+			.eyeball{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #000000;
+				animation: eye 5s linear infinite;
+			}
+			.mouth{
+				width: 120px;
+				height: 120px;
+				border-radius:50%;
+				border-bottom:3px solid #000;
+				margin: 0 auto;
+			}
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				animation: love 5s linear infinite;
+			}
+			@keyframes eye{
+				0%{transform: translate(0px);}
+				25%{transform: translate(30px); background-color: #fff;}
+				50%{transform: translate(40px); background-color: #fff;}
+				60%{transform: translate(50px);}
+				70%{transform: translate(40px); background-color: #fff;}
+				75%{transform: translate(30px);}
+				100%{transform: translate(0px);}
+			}
+			@keyframes love{
+				0%{transform:scale(0);}
+				25%{transform:scale(1);}
+				50%{transform:scale(2);}
+				70%{transform: scale(0);}
+				75%{transform:scale(0);}
+				100%{transform:scale(0);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="out_box">
+			<div class="eyebrow">
+				<div class="eyebrow_left"></div>
+				<div class="eyebrow_rigth"></div>
+			</div>
+			<div class="eye">
+				<div class="eye_left">
+					<div class="eyeball"></div>
+					<img src="img/xin.png" >
+				</div>
+				<div class="eye_right">
+					<div class="eyeball"></div>
+					<img src="img/xin.png" >
+				</div>
+			</div>
+			<div class="mouth"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				perspective: 1000px;
+			}
+			.outter{
+				width: 100px;
+				margin: 200px auto;
+				position: relative;
+				transform-style: preserve-3d ;
+				animation:move 4s linear infinite;
+			}
+			@keyframes move{
+				from{transform:rotate3d(1,1,1,0deg);}
+				to{transform: rotate3d(1,1,1,360deg);}
+			}
+			.outter div{
+				position: absolute;
+				left: 0;
+				top: 0;
+				transform: translateZ(75px);
+				width: 150px;
+				height: 150px;
+			}
+			.d1{background-color: rgba(0,255,255,.6);}
+			.d2{background-color: rgba(255,228,196,.6);}
+			.d3{background-color: rgba(211,198,111,.6);}
+			.d4{background-color: rgba(220,20,60,.6);}
+			.d5{background-color: rgba(153,50,204,.6);}
+			.d6{background-color: rgba(131,212,165,.6);}.
+			div:nth-child(1){transform: rotateY(0deg) translateZ(75px);}
+			div:nth-child(2){transform: rotateY(90deg) translateZ(75px);}
+			div:nth-child(3){transform: rotateY(180deg) translateZ(75px);}
+			div:nth-child(4){transform: rotateY(270deg) translateZ(75px);}
+			div:nth-child(5){transform: rotateX(90deg) translateZ(75px);}
+			div:nth-child(6){transform: rotateX(270deg) translateZ(75px);}
+			
+		</style>
+	</head>
+	<body>
+		<div class="outter">
+			<div class="d1"></div>
+			<div class="d2"></div>
+			<div class="d3"></div>
+			<div class="d4"></div>
+			<div class="d5"></div>
+			<div class="d6"></div> 
+			
+		</div>
+	</body>
+</html>

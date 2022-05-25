@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态圆</title>
+</head>
+<body>
+    <canvas id="cavs" width="1000px" height="1000px">
+        当前浏览器不支持canvas标签请升级浏览器或者使用Chorme浏览器
+    </canvas>
+    <script type="text/javascript">
+        var c=document.getElementById("cavs").getContext("2d");
+        //开始角度
+        var startAngle=-(1/2)*Math.PI;
+    //   结束角度
+        var endAngle=startAngle+2*Math.PI;
+    //    偏移角度量
+        var xAngle=1*(Math.PI/180);
+    //  某个时刻的结束角度
+        var tmpAngle=startAngle;
+    //    函数
+        var rander=function () {
+            if(tmpAngle>=endAngle)
+            {
+                return;
+            }
+            else{
+                tmpAngle+=xAngle;
+            }
+            //清除（左上角坐标x,y,宽度，高度）
+            c.clearRect(0,0,1000,1000)
+            //绘制园
+            c.beginPath();
+            c.arc(500,250,200,startAngle,tmpAngle);
+            c.lineWidth='5';
+            c.strokeStyle='deepskyblue';
+            c.stroke();
+            c.closePath();
+            //数字
+            //字体颜色
+            c.fillStyle='deepskyblue';
+            // 字体
+            c.font="50px Microsoft Yahei";
+            //字体居中
+            c.textAlign="center";
+            //表达式
+            c.fillText(Math.round((tmpAngle-startAngle)/(2*Math.PI)*100)+'%',500,250,300);
+            //刷新
+            requestAnimationFrame(rander);
+        }
+        rander();
+    </script>
+</body>
+</html>

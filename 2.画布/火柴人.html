@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>火柴人</title>
+</head>
+<body>
+    <canvas id="cavs" width="1000px" height="1000px">
+        当前浏览器不支持canvas标签请升级浏览器或者使用Chorme浏览器
+    </canvas>
+<script type="text/javascript">
+    var c=document.getElementById("cavs").getContext("2d");
+    // 头部
+    c.beginPath();
+    c.arc(400,100,30,0,2*Math.PI);
+    c.lineWidth='5';
+    c.stroke();
+    c.closePath();
+// 脖子
+    c.beginPath();
+    c.moveTo(400,130);
+    c.lineTo(400,140);
+    c.stroke();
+    c.closePath();
+//  身体
+    c.beginPath();
+    c.moveTo(400,140);
+    c.lineTo(400,260);
+    c.lineWidth="25"
+    c.stroke();
+    c.closePath();
+//    绘制文件夹
+    c.beginPath();
+    c.moveTo(360,200);
+    c.lineTo(440,200);
+    c.lineTo(440,250);
+    c.lineTo(360,250);
+    c.lineWidth='2';
+    c.fillStyle="#fff";
+    c.fill();
+    c.closePath();
+    c.stroke();
+//  绘制手臂
+    c.beginPath();
+    c.moveTo(400,140);
+    c.lineTo(440,200);
+    c.lineTo(400,240);
+    c.lineWidth="10";
+    c.stroke();
+    c.closePath();
+//  圆形手
+    c.beginPath();
+    c.arc(400,240,10,0,2*Math.PI);
+    c.fillStyle="#000";
+    c.fill();
+    c.lineWidth="1";
+    c.stroke();
+    c.closePath();
+//
+    c.beginPath();
+    c.moveTo(400,260);
+    c.lineTo(440,400);
+    c.lineWidth="5"
+    c.closePath();
+    c.stroke();
+    c.beginPath();
+    c.moveTo(400,260);
+    c.lineTo(360,400);
+    c.lineWidth="5"
+    c.closePath();
+    c.stroke();
+
+    c.beginPath();
+    c.arc(430,400,10,0,1*Math.PI,true);
+    c.closePath();
+    c.stroke();
+    c.closePath();
+
+    c.beginPath();
+    c.arc(350,400,10,0,1*Math.PI,true);
+    c.closePath();
+    c.stroke();
+    c.closePath();
+</script>
+</body>
+</html>
